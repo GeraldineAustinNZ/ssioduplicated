@@ -1,9 +1,6 @@
 // babel.config.js
 module.exports = function (api) {
-  if (api && typeof api.cache === 'function') {
-    api.cache(true);
-  }
-
+  api && api.cache && api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: [
@@ -15,9 +12,7 @@ module.exports = function (api) {
           },
         },
       ],
-      // Optional: Only enable this if you're explicitly using import.meta
-      // or if a package is failing due to it.
-      // 'babel-plugin-transform-import-meta',
+      'babel-plugin-transform-import-meta', // ← Required!
     ],
   };
 };
