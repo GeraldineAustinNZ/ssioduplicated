@@ -1,71 +1,21 @@
-import 'dotenv/config'; // Loads environment variables from a .env file
-
-export default ({ config }) => ({
-  ...config,
+export default {
   name: "SurgerySupport.io",
   slug: "surgery-support-platform",
   version: "1.0.0",
   orientation: "portrait",
-  scheme: "surgerysupport",
   userInterfaceStyle: "automatic",
-  newArchEnabled: true,
   icon: "./public/icon.png",
+  web: {
+    bundler: "metro",
+    output: "static", // <- important for preview stability
+    favicon: "./public/icon.png"
+  },
   splash: {
-    image: "./public/splash.png",
+    image: "./public/icon.png", // reuse icon instead of missing splash
     resizeMode: "contain",
     backgroundColor: "#ffffff"
   },
-  web: {
-    bundler: "metro",
-    output: "server",
-    favicon: "./public/icon.png"
-  },
-  ios: {
-    supportsTablet: true,
-    bundleIdentifier: "io.surgerysupport.app"
-  },
-  android: {
-    package: "io.surgerysupport.app",
-    permissions: [
-      "CAMERA",
-      "READ_EXTERNAL_STORAGE",
-      "WRITE_EXTERNAL_STORAGE",
-      "NOTIFICATIONS"
-    ],
-    intentFilters: [
-      {
-        action: "VIEW",
-        data: {
-          scheme: "surgerysupport",
-          host: "*"
-        },
-        category: ["BROWSABLE", "DEFAULT"]
-      }
-    ]
-  },
-  plugins: [
-    "expo-router",
-    "expo-camera",
-    "expo-notifications",
-    [
-      "expo-document-picker",
-      {
-        iCloudContainerEnvironment: "Production"
-      }
-    ]
-  ],
   experiments: {
     typedRoutes: true
-  },
-  assetBundlePatterns: ["**/*"],
-  updates: {
-    fallbackToCacheTimeout: 0
-  },
-  extra: {
-    apiUrl: process.env.API_URL || "http://localhost:3000",
-    environment: process.env.NODE_ENV || "development",
-    eas: {
-      projectId: process.env.EAS_PROJECT_ID || ""
-    }
   }
-});
+};
