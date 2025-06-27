@@ -4,7 +4,10 @@ const exclusionList = require('metro-config/src/defaults/exclusionList');
 
 const config = getDefaultConfig(__dirname);
 
-// Block packages using import.meta or ESM-only builds
+// Add .mjs to supported source extensions
+config.resolver.sourceExts = [...config.resolver.sourceExts, 'mjs'];
+
+// Block problematic ESM-only or import.meta packages
 config.resolver.blockList = exclusionList([
   /node_modules\/@react-native\/debugger-frontend\/.*/,
   /node_modules\/acorn\/.*/,
