@@ -2,7 +2,10 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      'babel-plugin-transform-import-meta', // Must be first
+      // ✅ MUST be first to properly transpile import.meta for web
+      'babel-plugin-transform-import-meta',
+
+      // ✅ Module resolver for @/ aliasing
       [
         'module-resolver',
         {
