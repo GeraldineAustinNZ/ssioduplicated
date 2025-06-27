@@ -12,7 +12,7 @@ export default {
     backgroundColor: '#ffffff',
   },
   web: {
-    bundler: 'static', // ✅ avoids Metro / import.meta issues
+    bundler: 'static', // ✅ critical to avoid import.meta issues on web
     output: 'export',
     favicon: './public/icon.png',
   },
@@ -20,3 +20,4 @@ export default {
     typedRoutes: true,
   },
 };
+
