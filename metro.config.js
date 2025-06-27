@@ -12,7 +12,6 @@ config.resolver.blockList = exclusionList([
   /node_modules\/@react-native\/debugger-frontend\/.*/,
   /node_modules\/acorn\/.*/,
   /node_modules\/terser\/.*/,
-  // ❌ Removed: /node_modules\/glob\/dist\/esm\/.*/,
   /node_modules\/lightningcss\/.*/,
   /node_modules\/sucrase\/dist\/esm\/.*/,
 ]);
