@@ -1,6 +1,9 @@
 // babel.config.js
 module.exports = function (api) {
-  api && api.cache && api.cache(true);
+  if (api && typeof api.cache === 'function') {
+    api.cache(true);
+  }
+
   return {
     presets: ['babel-preset-expo'],
     plugins: [
@@ -12,7 +15,8 @@ module.exports = function (api) {
           },
         },
       ],
-      // You may re-add transform-import-meta if *you know* you're using it:
+      // Optional: Only enable this if you're explicitly using import.meta
+      // or if a package is failing due to it.
       // 'babel-plugin-transform-import-meta',
     ],
   };
