@@ -5,7 +5,7 @@ import { Card } from '../../components/ui/Card';
 import { Heart, Calendar, MessageCircle, FileText } from 'lucide-react-native';
 
 export default function HomeScreen() {
-  const { user } = useUser();
+ const { user } = useAuthStore();
 
   return (
     <ScrollView style={styles.container}>
