@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/Button';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 import { useRouter } from 'expo-router';
 import { useAuthStore } from '@/stores/authStore';
-import { SignUpPrompt } from './auth/SignUpPrompt';
+import { SignUpPrompt } from '@/components/auth/SignUpPrompt';
 
 export default function SignInScreen() {
   const router = useRouter();
