@@ -1,4 +1,5 @@
-// app.config.js
+import 'dotenv/config'; // Loads environment variables from a .env file
+
 export default ({ config }) => ({
   ...config,
   name: "SurgerySupport.io",
@@ -61,10 +62,10 @@ export default ({ config }) => ({
     fallbackToCacheTimeout: 0
   },
   extra: {
-    apiUrl: process.env.API_URL,
-    environment: process.env.NODE_ENV,
+    apiUrl: process.env.API_URL || "http://localhost:3000",
+    environment: process.env.NODE_ENV || "development",
     eas: {
-      projectId: process.env.EAS_PROJECT_ID
+      projectId: process.env.EAS_PROJECT_ID || ""
     }
   }
 });
