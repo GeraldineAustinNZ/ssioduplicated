@@ -5,6 +5,7 @@ export default {
   version: '1.0.0',
   orientation: 'portrait',
   userInterfaceStyle: 'automatic',
+  scheme: 'surgerysupport', // Needed for linking
   icon: './public/icon.png',
   splash: {
     image: './public/icon.png',
@@ -12,7 +13,7 @@ export default {
     backgroundColor: '#ffffff',
   },
   web: {
-    bundler: 'metro', // ✅ USE METRO NOT WEBPACK
+    bundler: 'metro', // ✅ use Metro, not Webpack
     output: 'static',
     favicon: './public/icon.png',
   },
