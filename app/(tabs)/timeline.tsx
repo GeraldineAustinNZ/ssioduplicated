@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, RefreshControl, TouchableOpacity, Image } from 'react-native';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuthStore } from '@/stores/authStore';
 import { supabase } from '../../lib/supabase';
 import { Card } from '../../components/ui/Card';
 import { LoadingSpinner } from '../../components/ui/LoadingSpinner';
@@ -12,7 +12,7 @@ type RecoveryTask = Database['public']['Tables']['recovery_tasks']['Row'];
 type Document = Database['public']['Tables']['documents']['Row'];
 
 export default function TimelineScreen() {
-  const { user } = useAuth();
+  const { user, loading } = useAuthStore();
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [surgeryPlan, setSurgeryPlan] = useState<SurgeryPlan | null>(null);
