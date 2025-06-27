@@ -1,4 +1,3 @@
-// babel.config.js
 module.exports = function (api) {
   api.cache(true);
   return {
@@ -12,6 +11,7 @@ module.exports = function (api) {
           },
         },
       ],
+      'babel-plugin-transform-import-meta', // add this line
     ],
   };
 };
