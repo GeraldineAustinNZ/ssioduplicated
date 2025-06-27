@@ -12,7 +12,7 @@ export default {
     backgroundColor: '#ffffff',
   },
   web: {
-    bundler: 'static', // ✅ critical to avoid import.meta issues on web
+    bundler: 'static', // ✅ disables Metro, fixes import.meta
     output: 'export',
     favicon: './public/icon.png',
   },
