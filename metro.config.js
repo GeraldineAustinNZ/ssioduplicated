@@ -18,3 +18,4 @@ config.resolver.blockList = exclusionList([
 ]);
 
 module.exports = config;
+
