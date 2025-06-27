@@ -10,7 +10,8 @@ const fs = require('fs');
         console.log(file);
       }
     } catch (err) {
-      // Ignore unreadable files
+      // Skip files that can't be read
     }
   }
 })();
+
