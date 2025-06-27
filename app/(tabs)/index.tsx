@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { useUser } from '../../hooks/useAuth';
+import { useAuthStore } from '@/stores/authStore';
 import { Card } from '../../components/ui/Card';
 import { Heart, Calendar, MessageCircle, FileText } from 'lucide-react-native';
 
