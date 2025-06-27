@@ -3,6 +3,7 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
+      'babel-plugin-transform-import-meta', // ✅ Put this FIRST
       [
         'module-resolver',
         {
@@ -11,7 +12,6 @@ module.exports = function (api) {
           },
         },
       ],
-      'babel-plugin-transform-import-meta', // add this line
     ],
   };
 };
