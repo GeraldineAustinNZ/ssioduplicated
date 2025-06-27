@@ -5,7 +5,7 @@ export default {
   version: '1.0.0',
   orientation: 'portrait',
   userInterfaceStyle: 'automatic',
-  icon: './public/icon.png',
+  icon: './public/icon.png', // ✅ ensure this exists
   splash: {
     image: './public/icon.png',
     resizeMode: 'contain',
@@ -13,8 +13,8 @@ export default {
   },
   web: {
     bundler: 'metro',
-    output: 'static',
-    favicon: './public/icon.png',
+    output: 'static', // ✅ enables static export
+    favicon: './public/icon.png', // ✅ must exist
   },
   experiments: {
     typedRoutes: true,
