@@ -1,4 +1,3 @@
-// app.config.ts
 export default {
   name: "SurgerySupport.io",
   slug: "surgery-support-platform",
@@ -6,15 +5,15 @@ export default {
   orientation: "portrait",
   userInterfaceStyle: "automatic",
   icon: "./public/icon.png",
-  splash: {
-    image: "./public/icon.png", // fallback to icon
-    resizeMode: "contain",
-    backgroundColor: "#ffffff"
-  },
   web: {
     bundler: "metro",
-    output: "static", // improves preview stability in Bolt
+    output: "static",
     favicon: "./public/icon.png"
+  },
+  splash: {
+    image: "./public/splash.png", // ← using uploaded file
+    resizeMode: "contain",
+    backgroundColor: "#ffffff"
   },
   experiments: {
     typedRoutes: true
