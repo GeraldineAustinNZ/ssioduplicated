@@ -1,21 +1,20 @@
 // app.config.js
-
 export default {
   name: 'SurgerySupport.io',
   slug: 'surgery-support-platform',
   version: '1.0.0',
   orientation: 'portrait',
   userInterfaceStyle: 'automatic',
-  icon: './public/icon.png', // ✅ Ensure this file exists
+  icon: './public/icon.png',
   splash: {
-    image: './public/icon.png', // ✅ Or replace with splash.png if preferred
+    image: './public/icon.png',
     resizeMode: 'contain',
     backgroundColor: '#ffffff',
   },
   web: {
     bundler: 'metro',
     output: 'static',
-    favicon: './public/icon.png', // ✅ Required for web
+    favicon: './public/icon.png',
   },
   experiments: {
     typedRoutes: true,
