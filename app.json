@@ -8,6 +8,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "icon": "./public/icon.png",
+    "splash": {
+      "image": "./public/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "web": {
       "bundler": "metro",
       "output": "server",
@@ -49,6 +54,15 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "assetBundlePatterns": ["**/*"],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_YOUR_EAS_PROJECT_ID"
+      }
     }
   }
 }
