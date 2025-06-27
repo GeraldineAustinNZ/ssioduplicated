@@ -1,10 +1,10 @@
+// app.config.js
 export default {
   name: 'SurgerySupport.io',
   slug: 'surgery-support-platform',
   version: '1.0.0',
   orientation: 'portrait',
   userInterfaceStyle: 'automatic',
-  scheme: 'surgerysupport',
   icon: './public/icon.png',
   splash: {
     image: './public/icon.png',
@@ -12,8 +12,8 @@ export default {
     backgroundColor: '#ffffff',
   },
   web: {
-   bundler: 'webpack', // ✅ valid options: 'metro' or 'webpack'
-    output: 'export',
+    bundler: 'metro', // ✅ USE METRO NOT WEBPACK
+    output: 'static',
     favicon: './public/icon.png',
   },
   experiments: {
