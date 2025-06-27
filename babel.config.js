@@ -1,6 +1,9 @@
 // babel.config.js
-module.exports = function (api) {
-  api.cache(true);
+module.exports = function babelConfig(api) {
+  if (api && typeof api.cache === 'function') {
+    api.cache(true);
+  }
+
   return {
     presets: ['babel-preset-expo'],
     plugins: [
