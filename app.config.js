@@ -12,7 +12,7 @@ export default {
     backgroundColor: '#ffffff',
   },
   web: {
-    bundler: 'static', // ✅ disables Metro, fixes import.meta
+   bundler: 'webpack', // ✅ valid options: 'metro' or 'webpack'
     output: 'export',
     favicon: './public/icon.png',
   },
@@ -20,4 +20,3 @@ export default {
     typedRoutes: true,
   },
 };
-
