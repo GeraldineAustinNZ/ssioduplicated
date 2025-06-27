@@ -1,5 +1,4 @@
-// babel.config.js
-module.exports = function babelConfig(api) {
+module.exports = function (api) {
   if (api && typeof api.cache === 'function') {
     api.cache(true);
   }
@@ -7,7 +6,7 @@ module.exports = function babelConfig(api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      'babel-plugin-transform-import-meta', // ✅ Must be first
+      'babel-plugin-transform-import-meta', // Must be FIRST
       [
         'module-resolver',
         {
